@@ -9,7 +9,6 @@ const target = findTarget();
 if (!target)
   throw new Error(`'${scriptName}' was not found under './tools' directory`);
 
-execSync(
-  `yarn ts-node --project ./tools/tsconfig.tools.json ${target} ${args}`,
-  { stdio: "inherit" }
-);
+execSync(`yarn ts-node --project ./tools/tsconfig.json ${target} ${args}`, {
+  stdio: "inherit",
+});

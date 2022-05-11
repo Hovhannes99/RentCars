@@ -1,13 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16c5e604-4a02-4b32-a1b3-a1910918bdff" name="Changes" comment="" />
+    <list default="true" id="16c5e604-4a02-4b32-a1b3-a1910918bdff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.overrides.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AbboutCar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Cars/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Video/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphql/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/logo-with-text-silver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/util.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/car.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-ssr.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-ssr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/car-image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact-ways/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactWays.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/audi-r8-v10-2018-coupe_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-750i-lx-luxury_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-i8-roadster-white_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-m3-2020_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-m3-2020_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-x7-2020.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-x7-2020.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bmw-x7-2020_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/bmw-x7-2020_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-458-f1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-458-f1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-458-f1_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-458-f1_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-458-f1_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-458-f1_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-458-f1_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-458-f1_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-458-f1_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-458-f1_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/ferrari-portofino-spyder-2019-white_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/lamborghini-aventador-matte.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lamborghini-aventador-matte.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/lamborghini-huracan-lp610-spyder-orange.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lamborghini-huracan-lp610-spyder-orange.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/lamborghini-huracan-spyder-red-2018.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lamborghini-huracan-spyder-red-2018.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/lamborghini-urus-black.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/lamborghini-urus-black.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mclaren-570s.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mclaren-570s.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mclaren-570s_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mclaren-570s_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mclaren-570s_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mclaren-570s_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-c63s-amg-sedan_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-benz-glc63-2020_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-2019_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-gt-roadster-amg-2020_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-s-class-63-2020_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-s-class-63-2020_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mercedes-s-class-63-2020_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mercedes-s-class-63-2020_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/porsche-911-4s-2018.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/porsche-911-4s-2018.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/porsche-911-4s-2018_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-cullinan-2020_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/rolls-royce-wraith-blue_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/{CarsJson.slug}.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/{CarsJson.slug}.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/executor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tools/executor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/scrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tools/scrapper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tools/scrapper.ts" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="28wA9nB9Eswb3v0On2XeDD8LBFq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,6 +160,81 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/public/static" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/styles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/car-image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.develop">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="format" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="parse" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="parse" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+        <item itemvalue="npm.parse" />
+        <item itemvalue="npm.format" />
+        <item itemvalue="npm.clean" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -32,10 +245,27 @@
       <updated>1652117128011</updated>
       <workItem from="1652117131976" duration="507000" />
       <workItem from="1652119000626" duration="2987000" />
+      <workItem from="1652134241631" duration="210000" />
+      <workItem from="1652134596257" duration="10539000" />
+      <workItem from="1652183560691" duration="13275000" />
+      <workItem from="1652202695818" duration="13864000" />
+      <workItem from="1652280214692" duration="15862000" />
+      <workItem from="1652300323732" duration="353000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

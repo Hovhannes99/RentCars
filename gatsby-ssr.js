@@ -1,15 +1,16 @@
 import React from "react";
-import { Layout } from "./src/components/layout";
+import {Layout} from "./src/components";
 
-export const wrapPageElement = ({ element }) => {
-  return <Layout>{element}</Layout>;
+export const onRenderBody = ({setBodyAttributes, setHtmlAttributes}) => {
+    setBodyAttributes({
+        className: "relative",
+    });
+
+    setHtmlAttributes({
+        lang: "en",
+    });
 };
-export const onRenderBody = ({ setBodyAttributes, setHtmlAttributes }) => {
-  setBodyAttributes({
-    className: "relative",
-  });
 
-  setHtmlAttributes({
-    lang: "en",
-  });
+export const wrapPageElement = ({element, props}) => {
+    return <Layout {...props}>{element}</Layout>;
 };

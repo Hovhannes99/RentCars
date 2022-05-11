@@ -5,13 +5,12 @@ const { screens } = require("./src/theme/responsive");
 
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/**/*.html"],
-  darkMode: false, // or 'media' or 'class'
+  purge:["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
+        DEFAULT: "0",
         md: "2rem",
         lg: "5rem",
       },

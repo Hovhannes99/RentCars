@@ -35,12 +35,22 @@ exports.onCreatePage = ({ page, actions, getNodesByType }) => {
     deletePage(page);
     createPage({
       ...page,
+      page:'404',
       context: {
         ...page.context,
         make: carMake,
       },
     });
   }
+};
+
+exports.onCreateBabelConfig = ({ actions }) => {
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  });
 };
 
 exports.createResolvers = ({ createResolvers, getNodesByType }) =>

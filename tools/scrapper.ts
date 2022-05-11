@@ -1,4 +1,3 @@
-import { default as main } from "axios";
 import { load } from "cheerio";
 import { link, readFile, writeFileSync } from "fs";
 import { promisify } from "util";
@@ -19,7 +18,7 @@ const linkFromRef = (
   regex: RegExp,
   formatLink?: (l: string) => string
 ) => {
-  const aTag = (element as unknown) as Cheerio;
+  const aTag = element as unknown as Cheerio;
   return {
     slug: removeTrailFromSlug(
       regex,
@@ -155,8 +154,7 @@ async function run() {
   const contactUs = {
     address: {
       title: "2201 Collins Ave, Miami Beach, FL 33139",
-      link:
-        "https://g.page/pugachevLuxuryCarRental?sharedata=!4m5!3m4!1s0x0:0x5873c3f6836487d1!8m2!3d26.022063!4d-80.1436",
+      link: "https://g.page/pugachevLuxuryCarRental?sharedata=!4m5!3m4!1s0x0:0x5873c3f6836487d1!8m2!3d26.022063!4d-80.1436",
     },
     gmb: {
       title: "Google My Business",
@@ -220,8 +218,7 @@ async function run() {
   };
 
   const header = {
-    logo:
-      "https://pugachev.miami/wp-content/uploads/2019/03/logo-with-text-silver-2.png",
+    logo: "https://pugachev.miami/wp-content/uploads/2019/03/logo-with-text-silver-2.png",
     nav: $("#avia-menu")
       .children("li")
       .not(":first")
@@ -232,10 +229,15 @@ async function run() {
           .children("ul")
           .children("li")
           .children("a")
-          .filter((_, ec) => new URL((ec ?? this).attribs["href"]).pathname !== "/")
+          .filter(
+            (_, ec) => new URL((ec ?? this).attribs["href"]).pathname !== "/"
+          )
           .map((_, ec) => {
             return {
-              slug: removeTrailFromSlug(BETWEEN_TRAIL, (ec ?? this).attribs["href"]),
+              slug: removeTrailFromSlug(
+                BETWEEN_TRAIL,
+                (ec ?? this).attribs["href"]
+              ),
               title: $(ec).find("span.avia-menu-text").text(),
             };
           })

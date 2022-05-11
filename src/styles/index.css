@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .container {
+       @apply  max-w-[1440px] mx-auto
+    }
+
+    .main {
+    }
+
+    .wrapper {
+        @apply w-full bg-[#191919]
+    }
+
+    @media (min-width: 1024px){
+        .layout--main{
+        }
+    }
+
+    .layout--main {
+    }
+
+    .page {
+        @apply px-20
+    }
+
+    .btn {
+        border-radius: 9999px;
+        border-width: 1px;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+
+    .btn--wider {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+
+    @media (min-width: 768px){
+            .btn--wider {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+    }
+
+    @media (min-width: 1024px){
+        .btn {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    @media (min-width: 768px){
+        .btn {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+    }
+
+    .btn {
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+        cursor:pointer;
+    }
+
+    .btn:hover{
+        --tw-scale-x: 1.05;
+        --tw-scale-y: 1.05;
+    }
+
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+
+
+
+    .btn-checkout-section {
+        @apply w-full bg-blue-100 border border-blue-300 rounded-md shadow-sm py-2 px-4 text-sm font-medium hover:bg-blue-200;
+    }
+
+    a {
+        @apply text-blue-600 hover:text-blue-500 cursor-pointer;
+    }
+
+    *{
+        --tw-shadow: 0 0 transparent;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59,130,246,0.5);
+        --tw-ring-offset-shadow: 0 0 transparent;
+        --tw-ring-shadow: 0 0 transparent;
+    }
+}
