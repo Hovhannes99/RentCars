@@ -1,13 +1,11 @@
+import {useState, useEffect} from "react";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 // @ts-ignore
 import * as style from "../styles/car.module.scss"
-import {useState, useEffect} from "react";
-import {ImageCard} from "./Card";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 const AboutCar = ({car}) => {
-    const [carPhoto, setCarPhoto] = useState('')
+    const [carPhoto, setCarPhoto] = useState()
     useEffect(()=>{
-        console.log(car, "carrrrr")
         setCarPhoto(car.image.childImageSharp)
     }, [car])
     return (

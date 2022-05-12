@@ -252,8 +252,6 @@ export type Site = Node & {
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
   flags?: Maybe<SiteFlags>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -272,6 +270,7 @@ export type SiteFlags = {
   PRESERVE_WEBPACK_CACHE?: Maybe<Scalars['Boolean']>;
   FAST_REFRESH?: Maybe<Scalars['Boolean']>;
   QUERY_ON_DEMAND?: Maybe<Scalars['Boolean']>;
+  GRAPHQL_TYPEGEN?: Maybe<Scalars['Boolean']>;
   FAST_DEV?: Maybe<Scalars['Boolean']>;
 };
 
@@ -365,6 +364,7 @@ export type SitePluginPackageJson = {
   description?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
   main?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
   license?: Maybe<Scalars['String']>;
   dependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDependencies>>>;
   devDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDevDependencies>>>;
@@ -865,8 +865,6 @@ export type QuerySiteArgs = {
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   flags?: InputMaybe<SiteFlagsFilterInput>;
-  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
-  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
@@ -2070,6 +2068,7 @@ export type SiteFlagsFilterInput = {
   PRESERVE_WEBPACK_CACHE?: InputMaybe<BooleanQueryOperatorInput>;
   FAST_REFRESH?: InputMaybe<BooleanQueryOperatorInput>;
   QUERY_ON_DEMAND?: InputMaybe<BooleanQueryOperatorInput>;
+  GRAPHQL_TYPEGEN?: InputMaybe<BooleanQueryOperatorInput>;
   FAST_DEV?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
@@ -2128,9 +2127,8 @@ export type SiteFieldsEnum =
   | 'flags___PRESERVE_WEBPACK_CACHE'
   | 'flags___FAST_REFRESH'
   | 'flags___QUERY_ON_DEMAND'
+  | 'flags___GRAPHQL_TYPEGEN'
   | 'flags___FAST_DEV'
-  | 'polyfill'
-  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2265,8 +2263,6 @@ export type SiteFilterInput = {
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
   flags?: InputMaybe<SiteFlagsFilterInput>;
-  polyfill?: InputMaybe<BooleanQueryOperatorInput>;
-  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
@@ -2521,6 +2517,7 @@ export type SitePluginPackageJsonFilterInput = {
   description?: InputMaybe<StringQueryOperatorInput>;
   version?: InputMaybe<StringQueryOperatorInput>;
   main?: InputMaybe<StringQueryOperatorInput>;
+  author?: InputMaybe<StringQueryOperatorInput>;
   license?: InputMaybe<StringQueryOperatorInput>;
   dependencies?: InputMaybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: InputMaybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
@@ -2648,6 +2645,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___packageJson___description'
   | 'pluginCreator___packageJson___version'
   | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___author'
   | 'pluginCreator___packageJson___license'
   | 'pluginCreator___packageJson___dependencies'
   | 'pluginCreator___packageJson___dependencies___name'
@@ -2927,6 +2925,7 @@ export type SitePluginFieldsEnum =
   | 'packageJson___description'
   | 'packageJson___version'
   | 'packageJson___main'
+  | 'packageJson___author'
   | 'packageJson___license'
   | 'packageJson___dependencies'
   | 'packageJson___dependencies___name'
@@ -4083,7 +4082,7 @@ export type CarsJsonCategorySortInput = {
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_1_Query = { home?: { b1?: string | null, b2?: string | null } | null, ytRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, ytCoupleRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, cars: { nodes: Array<{ title?: string | null, slug?: string | null, price?: number | null, isSpecialOffer?: boolean | null, make?: string | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null }> } };
+export type Unnamed_1_Query = { home?: { b1?: string | null, b2?: string | null } | null, ytRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, ytCoupleRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, ytInstagramCars?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, cars: { nodes: Array<{ title?: string | null, slug?: string | null, price?: number | null, isSpecialOffer?: boolean | null, make?: string | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null }> } };
 
 export type CarQueryQueryVariables = Exact<{
   make: Scalars['String'];
@@ -4091,7 +4090,7 @@ export type CarQueryQueryVariables = Exact<{
 }>;
 
 
-export type CarQueryQuery = { car?: { title?: string | null, slug?: string | null, price?: number | null, yt?: string | null, info?: { security?: string | null, Includes?: string | null, Transmission?: string | null, Seats?: string | null, Engine?: string | null, mph?: string | null, MSRP?: string | null, hp?: string | null } | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null, mainThumbnail?: { childImageSharp?: { gatsbyImageData: any } | null } | null, thumbnails?: Array<{ main?: { childImageSharp?: { gatsbyImageData: any } | null } | null, small?: { childImageSharp?: { gatsbyImageData: any } | null } | null } | null> | null } | null, sameMakeCars: { nodes: Array<{ title?: string | null, slug?: string | null, price?: number | null, isSpecialOffer?: boolean | null, make?: string | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null }> } };
+export type CarQueryQuery = { car?: { title?: string | null, slug?: string | null, price?: number | null, yt?: string | null, info?: { security?: string | null, Includes?: string | null, Transmission?: string | null, Seats?: string | null, Engine?: string | null, mph?: string | null, MSRP?: string | null, hp?: string | null } | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null, mainThumbnail?: { childImageSharp?: { gatsbyImageData: any } | null } | null, thumbnails?: Array<{ main?: { childImageSharp?: { gatsbyImageData: any } | null } | null, small?: { childImageSharp?: { gatsbyImageData: any } | null } | null } | null> | null } | null, ytRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, ytCoupleRentCar?: { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null, sameMakeCars: { nodes: Array<{ title?: string | null, slug?: string | null, price?: number | null, isSpecialOffer?: boolean | null, make?: string | null, image?: { childImageSharp?: { gatsbyImageData: any } | null } | null }> } };
 
 export type GatsbyImageSharpFixedFragment = { base64?: string | null, width: number, height: number, src: string, srcSet: string };
 

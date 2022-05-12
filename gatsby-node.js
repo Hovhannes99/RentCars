@@ -25,6 +25,8 @@ const normalizeTitle = (title) => {
 };
 
 exports.onCreatePage = ({ page, actions, getNodesByType }) => {
+
+  console.log(page,"actions")
   if (page.componentPath.endsWith("{CarsJson.slug}.tsx")) {
     const { slug } = page.context;
     const { createPage, deletePage } = actions;
@@ -32,10 +34,9 @@ exports.onCreatePage = ({ page, actions, getNodesByType }) => {
     const carNode = getNodesByType("CarsJson").find((c) => c.slug === slug);
     const carMake = normalizeTitle(carNode.title);
 
-    deletePage(page);
+    // deletePage(page);
     createPage({
       ...page,
-      page:'404',
       context: {
         ...page.context,
         make: carMake,
