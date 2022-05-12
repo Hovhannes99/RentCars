@@ -1,5 +1,3 @@
-
-
 const Video = ({videoSrcURL, videoTitle, ...props}: any) => (
         <iframe
             width='100%'

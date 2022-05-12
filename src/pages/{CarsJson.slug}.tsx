@@ -6,15 +6,13 @@ import {ComponentProps, Fragment, useEffect, useState} from "react";
 
 import {Instagram, Telegram, WhatsApp} from "../components/ContactWays";
 import AboutCar from "../components/AbboutCar";
+import { data } from "autoprefixer";
 
 const CarInfo = ({
-                     info,
-
-                     className,
+                     info, className,
                  }: {
-    info: any;
-
-    className?: string;
+  info: any;
+  className?: string;
 }): JSX.Element => {
     return (<>
             <div
@@ -46,91 +44,6 @@ const CarInfo = ({
     );
 }
 
-const ApplyForm = ({className}: { className: string }): JSX.Element => (
-    <div>
-        {/*        <div>*/}
-        {/*            <WhatsApp*/}
-        {/*                text="Request in WhatsApp"*/}
-        {/*            />*/}
-        {/*        </div>*/}
-        {/*        <div>*/}
-        {/*            <Telegram*/}
-        {/*                text="Request in WhatsApp"*/}
-        {/*            />*/}
-        {/*        </div>*/}
-        {/*        <div>*/}
-        {/*            <Instagram*/}
-        {/*                text="Request in WhatsApp"*/}
-        {/*            />*/}
-        {/*        </div>*/}
-        {/*        <hr/>*/}
-        {/*        <div>*/}
-        {/*            We accept BITCOINS for payment!*/}
-        {/*        </div>*/}
-        {/*        <div>*/}
-        {/*            <Link className="underline" to="/">*/}
-        {/*                Security Service Available!*/}
-        {/*            </Link>{" "}*/}
-        {/*            Ask about it now!*/}
-        {/*        </div>*/}
-        {/*        <div*/}
-        {/*            className={cn("p-2", "bg-price-change text-white", "my-auto text-center")}*/}
-        {/*        >*/}
-        {/*            Prices are subject to change depending on dates!*/}
-        {/*        </div>*/}
-        {/*        <div className={cn("p-2", "bg-accept text-white", "my-auto text-center")}>*/}
-        {/*            We accept any country driver license!*/}
-        {/*        </div>*/}
-        {/*        <div className={cn("p-2", "bg-blue-400 text-white", "my-auto text-center")}>*/}
-        {/*            <Link to="/">*/}
-        {/*                When ordering a car, you get a <strong>20%</strong> discount on rental{" "}*/}
-        {/*                <strong>Boat 42 Vandutch</strong>! Ask the manager about it!*/}
-        {/*            </Link>*/}
-        {/*        </div>*/}
-        {/*        <form className="flex flex-col gap-y-4">*/}
-        {/*            <input placeholder="Name"/>*/}
-        {/*            <input placeholder="Email"/>*/}
-        {/*            <input placeholder="Phone"/>*/}
-        {/*            <input placeholder="Pick Up Date"/>*/}
-        {/*            <input placeholder="Return Up Date"/>*/}
-        {/*            <textarea*/}
-        {/*                placeholder="Comments"*/}
-        {/*                rows={5}*/}
-        {/*            />*/}
-        {/*            <label>*/}
-        {/*                <input checked={true} type="checkbox"/> I agree with{" "}*/}
-        {/*                <strong>Terms and Conditions*</strong>*/}
-        {/*            </label>*/}
-        {/*            <div>*/}
-        {/*                Note* We are negotiating a possible additional discount for public*/}
-        {/*                figures and celebrities!*/}
-        {/*            </div>*/}
-        {/*            <button>*/}
-        {/*                Submit*/}
-        {/*            </button>*/}
-        {/*        </form>*/}
-        {/*    </div>*/}
-        {/*);*/}
-
-        {/*const Title = ({*/}
-        {/*                   className,*/}
-        {/*                   price,*/}
-        {/*                   title,*/}
-        {/*               }: { className?: string; title: string; price: number }) => (<div className={className}>*/}
-        {/*        <h1 className={cn("text-white uppercase font-bold text-2xl md:text-4xl")}>*/}
-        {/*            {title}*/}
-        {/*        </h1>*/}
-        {/*        <h2>*/}
-        {/*      <span className="text-red-500 text-xl md:text-3xl font-bold">*/}
-        {/*        ${price}*/}
-        {/*      </span>*/}
-        {/*            <span className="text-base md:text-xl">/ Per Day</span>*/}
-        {/*        </h2>*/}
-    </div>
-);
-// interface IAboutCar  {
-//     car:(slug:{eq:string}) => CarQueryQuery
-// }
 export const CarPage = (props) => {
     const {car} = props.data;
     return <AboutCar car={car} />
@@ -204,6 +117,20 @@ export const query = graphql`
         }
       }
     }
+      ytRentCar: file(name: { glob: "yt-rent-car" }) {
+          childImageSharp {
+              resize(base64: true) {
+                  src
+              }
+          }
+      }
+      ytCoupleRentCar: file(name: { glob: "yt-couple-rent-car" }) {
+          childImageSharp {
+              resize(base64: true) {
+                  src
+              }
+          }
+      }
     sameMakeCars: allCarsJson(
       filter: { make: { eq: $make }, slug: { ne: $slug } }
     ) {
