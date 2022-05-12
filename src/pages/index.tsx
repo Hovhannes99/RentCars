@@ -2,9 +2,9 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import { CarsJsonGroupConnection} from "../graphql";
 // @ts-ignore
-import * as style from "/Users/hovo/Downloads/Telegram Desktop/pugachev_sta_soft/src/styles/layout.module.scss"
+import * as style from "../styles/layout.module.scss"
 // @ts-ignore
-import CarVideo from "/Users/hovo/Downloads/Telegram Desktop/pugachev_sta_soft/src/assets/pugachev.mp4"
+import CarVideo from "../assets/pugachev.mp4"
 import {Button} from "../components";
 import Video from '../components/Video'
 import Cars from "../components/Cars";

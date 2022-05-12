@@ -133,11 +133,6 @@ const ApplyForm = ({className}: { className: string }): JSX.Element => (
 // }
 export const CarPage = (props) => {
     const {car} = props.data;
-    const {info} = car;
-    const [carPhoto, setCarPhoto] = useState('');
-    useEffect(()=>{
-        setCarPhoto(car.slug)
-    }, [car])
     return <AboutCar car={car} />
 };
 

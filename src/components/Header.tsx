@@ -1,9 +1,9 @@
 import cn from "classnames";
 import { Link } from "gatsby";
 // @ts-ignore
-import * as style from "/Users/hovo/Downloads/Telegram Desktop/pugachev_sta_soft/src/styles/car.module.scss"
+import * as style from "../styles/car.module.scss"
 // @ts-ignore
-import Logo from "/Users/hovo/Downloads/Telegram Desktop/pugachev_sta_soft/src/static/logo-with-text-silver.png"
+import Logo from "../static/logo-with-text-silver.png"
 
 export const Header = ({ className }: { className?: string }) => {
   return (

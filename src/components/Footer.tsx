@@ -1,6 +1,6 @@
 import cn from "classnames";
 // @ts-ignore
-import instagram from '/Users/hovo/Downloads/Telegram Desktop/pugachev_sta_soft/src/static/insta_big.jpg'
+import instagram from '../static/insta_big.jpg'
 
 export default ({ className }: { className?: string }) => {
   return (

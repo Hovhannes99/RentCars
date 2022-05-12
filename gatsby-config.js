@@ -59,7 +59,7 @@ module.exports = {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "static",
-                path: "./src/static/",
+                path: "./src/",
             },
             __key: "static",
         },
