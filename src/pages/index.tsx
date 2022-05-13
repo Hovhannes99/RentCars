@@ -9,7 +9,7 @@ type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | 
 // @ts-ignore
 import *   as style from '../styles/layout.module.scss';
 import {UseDataContext} from "../context/dataContext";
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 
 interface DataProps {
   home: {
@@ -26,13 +26,13 @@ export const HomePage = ({
   data,
   location
 }: PageProps<DataProps>) => {
-  const { setDataImages } = UseDataContext()
+  const { setDataImages } = UseDataContext()w
 
   useEffect(()=>{
     setDataImages(data)
   }, [data])
-  return (
 
+  return (
     <div className={style.pageWrapper}>
       <section className={style.videoCar}>
         <video autoPlay muted loop>
@@ -57,7 +57,6 @@ export const HomePage = ({
         </div>
         <Cars cars={data.cars}/>
         <section className={style.video}>
-
         </section>
         <section className={style.exoticCarWrapper}>
           <div className={style.arrow}/>
