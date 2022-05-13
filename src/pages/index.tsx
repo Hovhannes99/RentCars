@@ -15,6 +15,7 @@ type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | 
 import *   as style from '../styles/layout.module.scss';
 import {UseDataContext} from "../context/dataContext";
 import {useEffect} from "react";
+import {getImage} from "gatsby-plugin-image";
 
 interface DataProps {
   home: {
@@ -22,8 +23,8 @@ interface DataProps {
     b2: string;
   };
   cars: CarsJsonGroupConnection;
-  ytRentCar: (name: { glob: "yt-rent-car" }) => ImageResizeType;
-  ytCoupleRentCar: (name: { glob: "yt-couple-rent-car" }) => ImageResizeType;
+  ytRentCar: any;
+  ytCoupleRentCar: any;
   ytInstagramCars: (name: { glob: "yt-couple-rent-car" }) => ImageResizeType;
   ytLogoRentCar : (name: { glob: "logo-with-text-silver" }) => ImageResizeType;
 }
@@ -62,7 +63,7 @@ export const HomePage = ({
         </div>
         <Cars cars={data.cars}/>
         <section className={style.video}>
-          <video controls>
+          <video controls poster={data?.ytRentCar?.childImageSharp?.resize?.src}>
             <source src={ExoticCarVideo} type="video/mp4"/>
           </video>
         </section>
@@ -77,7 +78,7 @@ export const HomePage = ({
             is available for your satisfaction. If you would like to reserve a
             luxury or exotic car in Miami, call Pugachev Luxury Car Rental at </p>
           <div className={style.video}>
-            <video controls>
+            <video controls poster={data?.ytCoupleRentCar?.childImageSharp?.resize?.src}>
               <source src={carExoticVideo} type="video/mp4"/>
             </video>
           </div>
@@ -104,14 +105,14 @@ export const query = graphql`
         }
         ytRentCar: file(name: { glob: "yt-rent-car" }) {
             childImageSharp {
-                resize(base64: true) {
+                resize(grayscale: false, width:1200) {
                     src
                 }
             }
         }
-         ytRentCar: file(name: { glob: "yt-rent-car" }) {
+       ytCoupleRentCar: file(name: { glob: "yt-couple-rent-car" }) {
             childImageSharp {
-                resize(base64: true) {
+                resize(grayscale: false, width:1200) {
                     src
                 }
             }
