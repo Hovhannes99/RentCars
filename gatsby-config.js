@@ -10,6 +10,9 @@ module.exports = {
     QUERY_ON_DEMAND: true,
     GRAPHQL_TYPEGEN: true,
     FAST_DEV: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_WEBPACK_CACHE: true,
+    LMDB_STORE: true,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -17,15 +20,7 @@ module.exports = {
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-sass",
-    },
-    // {
-    //   resolve: "gatsby-plugin-graphql-codegen",
-    //   options: {
-    //     fileName: `src/graphql/index.ts`,
-    //   }
-    // },
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
