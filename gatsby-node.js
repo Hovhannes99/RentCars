@@ -12,10 +12,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 const titleCase = (str) => startCase(camelCase(str));
 const normalizeTitle = (title) => {
   const getTitle = (tlc) => {
-    if (tlc.startsWith("rolls royce")) {
+    if(tlc.startsWith("rolls royce")) {
       return "rolls royce";
     }
-    if (tlc.startsWith("mercedes benz") || tlc.startsWith("mercedes-benz")) {
+    if(tlc.startsWith("mercedes benz") || tlc.startsWith("mercedes-benz")) {
       return "mercedes";
     }
     return tlc.split(" ")[0];
@@ -26,20 +26,31 @@ const normalizeTitle = (title) => {
 
 exports.onCreatePage = ({ page, actions, getNodesByType }) => {
 
-  console.log(page,"actions")
-  if (page.componentPath.endsWith("{CarsJson.slug}.tsx")) {
+  if(page.componentPath.endsWith("{CarsJson.slug}.tsx")) {
     const { slug } = page.context;
     const { createPage, deletePage } = actions;
 
     const carNode = getNodesByType("CarsJson").find((c) => c.slug === slug);
     const carMake = normalizeTitle(carNode.title);
 
-    // deletePage(page);
+    deletePage(page);
     createPage({
       ...page,
       context: {
         ...page.context,
         make: carMake,
+      },
+    });
+  } else {
+    const { createPage, deletePage } = actions;
+    deletePage(page);
+
+
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        make: "Not Found",
       },
     });
   }
@@ -88,23 +99,23 @@ exports.createResolvers = ({ createResolvers, getNodesByType }) =>
   });
 
 exports.sourceNodes = ({
-  actions,
-  createNodeId,
-  createContentDigest,
-  getNodesByType,
-}) => {
+                         actions,
+                         createNodeId,
+                         createContentDigest,
+                         getNodesByType,
+                       }) => {
   const { createNode } = actions;
 
   const dictionary = getNodesByType("CarsJson").reduce((all, next) => {
     next.category.forEach((c) => {
-      if (!all[c.slug]) {
+      if(!all[c.slug]) {
         all[c.slug] = {
           title: c.title,
           carSlugs: [],
         };
       }
 
-      if (!all[c.slug].carSlugs.includes(next.slug)) {
+      if(!all[c.slug].carSlugs.includes(next.slug)) {
         all[c.slug].carSlugs.push(next.slug);
       }
     });

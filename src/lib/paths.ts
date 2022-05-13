@@ -1,5 +1,5 @@
-// import { pagesPath } from "./$path";
-//
-// export const usePaths = () => {
-//   return pagesPath;
-// };
+import { pagesPath } from "./$path";
+
+export const usePaths = () => {
+  return pagesPath;
+};
