@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import { CarsJsonGroupConnection } from "../graphql";
 import { Button } from "../components";
-import Video from '../components/Video'
 import Cars from "../components/Cars";
 // @ts-ignore
 import CarVideo from "../assets/pugachev.mp4"
@@ -58,10 +57,7 @@ export const HomePage = ({
         </div>
         <Cars cars={data.cars}/>
         <section className={style.video}>
-          <Video
-            videoSrcURL={`https://www.youtube.com/embed/0JEWBKZ5_UM`}
-            videoTitle="Cars"
-          />
+
         </section>
         <section className={style.exoticCarWrapper}>
           <div className={style.arrow}/>
@@ -74,10 +70,7 @@ export const HomePage = ({
             is available for your satisfaction. If you would like to reserve a
             luxury or exotic car in Miami, call Pugachev Luxury Car Rental at </p>
           <div className={style.video}>
-            <Video
-              videoSrcURL={`https://www.youtube.com/embed/pdK4gwB5PvM`}
-              videoTitle="Cars"
-            />
+
           </div>
         </section>
         <section className={style.pugachev}>
