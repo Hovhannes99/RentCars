@@ -4,7 +4,6 @@ import { CarsJsonGroupConnection } from "../graphql";
 import { Button } from "../components";
 import Video from '../components/Video'
 import Cars from "../components/Cars";
-import { getYouTubeIDFromURL } from "../lib/media";
 // @ts-ignore
 import CarVideo from "../assets/pugachev.mp4"
 type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null;
@@ -63,6 +62,9 @@ export const HomePage = ({
           {/*  videoSrcURL={`https://www.youtube.com/embed/0JEWBKZ5_UM`}*/}
           {/*  videoTitle="Cars"*/}
           {/*/>*/}
+          <video autoPlay muted loop>
+            <source src={CarVideo} type="video/mp4"/>
+          </video>
         </section>
         <section className={style.exoticCarWrapper}>
           <div className={style.arrow}/>
@@ -79,6 +81,9 @@ export const HomePage = ({
             {/*  videoSrcURL={`https://www.youtube.com/embed/pdK4gwB5PvM`}*/}
             {/*  videoTitle="Cars"*/}
             {/*/>*/}
+            <video autoPlay muted loop>
+              <source src={CarVideo} type="video/mp4"/>
+            </video>
           </div>
         </section>
         <section className={style.pugachev}>
