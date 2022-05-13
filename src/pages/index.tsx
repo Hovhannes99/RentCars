@@ -4,7 +4,7 @@ import { CarsJsonGroupConnection } from "../graphql";
 import { Button } from "../components";
 import Video from '../components/Video'
 import Cars from "../components/Cars";
-import { getVideoThumbnail } from "../lib/media";
+import { getYouTubeIDFromURL } from "../lib/media";
 // @ts-ignore
 import CarVideo from "../assets/pugachev.mp4"
 type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null;
@@ -60,7 +60,7 @@ export const HomePage = ({
         <Cars cars={data.cars}/>
         <section className={style.video}>
           <Video
-            videoSrcURL={getVideoThumbnail("https://www.youtube.com/embed/0JEWBKZ5_UM")}
+            videoSrcURL={`https://www.youtube.com/embed/0JEWBKZ5_UM`}
             videoTitle="Cars"
           />
         </section>
@@ -76,7 +76,7 @@ export const HomePage = ({
             luxury or exotic car in Miami, call Pugachev Luxury Car Rental at </p>
           <div className={style.video}>
             <Video
-              videoSrcURL={getVideoThumbnail("https://www.youtube.com/embed/pdK4gwB5PvM")}
+              videoSrcURL={`https://www.youtube.com/embed/pdK4gwB5PvM`}
               videoTitle="Cars"
             />
           </div>
@@ -117,7 +117,7 @@ export const query = graphql`
         }
         ytLogoRentCar: file(name: { glob: "logo-with-text-silver" }) {
             childImageSharp {
-                resize(grayscale: false) {
+                resize(grayscale: false,width:300) {
                     src
                 }
             }
@@ -125,7 +125,7 @@ export const query = graphql`
         
         ytInstagramCars: file(name: { glob: "insta_big" }) {
             childImageSharp {
-                resize(grayscale: false) {
+                resize(grayscale: false,width:1200) {
                     src
                 }
             }
