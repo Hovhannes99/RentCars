@@ -6,6 +6,10 @@ import Video from '../components/Video'
 import Cars from "../components/Cars";
 // @ts-ignore
 import CarVideo from "../assets/pugachev.mp4"
+// @ts-ignore
+import ExoticCarVideo from '../assets/exoticCar.mp4'
+// @ts-ignore
+import carExoticVideo from '../assets/carExotic.mp4'
 type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null;
 // @ts-ignore
 import *   as style from '../styles/layout.module.scss';
@@ -58,12 +62,8 @@ export const HomePage = ({
         </div>
         <Cars cars={data.cars}/>
         <section className={style.video}>
-          {/*<Video*/}
-          {/*  videoSrcURL={`https://www.youtube.com/embed/0JEWBKZ5_UM`}*/}
-          {/*  videoTitle="Cars"*/}
-          {/*/>*/}
-          <video autoPlay muted loop>
-            <source src={CarVideo} type="video/mp4"/>
+          <video controls>
+            <source src={ExoticCarVideo} type="video/mp4"/>
           </video>
         </section>
         <section className={style.exoticCarWrapper}>
@@ -77,12 +77,8 @@ export const HomePage = ({
             is available for your satisfaction. If you would like to reserve a
             luxury or exotic car in Miami, call Pugachev Luxury Car Rental at </p>
           <div className={style.video}>
-            {/*<Video*/}
-            {/*  videoSrcURL={`https://www.youtube.com/embed/pdK4gwB5PvM`}*/}
-            {/*  videoTitle="Cars"*/}
-            {/*/>*/}
-            <video autoPlay muted loop>
-              <source src={CarVideo} type="video/mp4"/>
+            <video controls>
+              <source src={carExoticVideo} type="video/mp4"/>
             </video>
           </div>
         </section>
