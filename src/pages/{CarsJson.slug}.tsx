@@ -1,13 +1,14 @@
 import cn from "classnames";
-import {graphql } from "gatsby";
-import { Fragment } from "react";
+import {graphql} from "gatsby";
+import {Fragment, useEffect} from "react";
 import AboutCar from "../components/AbboutCar";
+import {UseDataContext} from "../context/dataContext";
 
 const CarInfo = ({
                      info, className,
                  }: {
-  info: any;
-  className?: string;
+    info: any;
+    className?: string;
 }): JSX.Element => {
     return (<>
             <div
@@ -41,13 +42,24 @@ const CarInfo = ({
 
 export const CarPage = (props) => {
     const {car} = props.data;
-    return <AboutCar car={car} />
+    const { setDataImages } = UseDataContext()
+    useEffect(()=>{
+        setDataImages(props.data)
+    },[props.data])
+    return <AboutCar car={car} data={props.data} />
 };
 
 export default CarPage;
 
 export const query = graphql`
   query CarQuery($make: String!, $slug: String!) {
+       ytInstagramCars: file(name: { glob: "insta_big" }) {
+            childImageSharp {
+                resize(grayscale: false, width: 1000) {
+                    src
+                }
+            }
+        }
     car: carsJson(slug: { eq: $slug }) {
       title
       slug
@@ -62,7 +74,6 @@ export const query = graphql`
         MSRP: MSRP_
         hp: Horse_Power_
       }
-      yt
       image: imageFile {
         childImageSharp {
           gatsbyImageData(

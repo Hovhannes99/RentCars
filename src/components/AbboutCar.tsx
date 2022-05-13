@@ -2,12 +2,16 @@ import {useState, useEffect} from "react";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 // @ts-ignore
 import * as style from "../styles/car.module.scss"
+import {UseDataContext} from "../context/dataContext";
 
-const AboutCar = ({car}) => {
+const AboutCar = ({car, data}) => {
     const [carPhoto, setCarPhoto] = useState()
+    const { setDataImages } = UseDataContext()
+
     useEffect(()=>{
         setCarPhoto(car.image.childImageSharp)
-    }, [car])
+        setDataImages(data)
+    }, [car, data])
     return (
         <div className={style.carInfoWrapper}>
             <div className={style.infoWrapper}>

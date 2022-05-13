@@ -1,15 +1,21 @@
-import  {createContext, useContext, useState, useMemo} from 'react'
+import {createContext, useContext, useState, useMemo, Dispatch, SetStateAction} from 'react'
+
+
+export interface IData {
+    dataImages: any
+    setDataImages: Dispatch<SetStateAction<object>>
+}
 
 const initialState = {
     data: {},
 }
 
-const CertificateContext = createContext<any>({
+const CertificateContext = createContext<IData>({
     dataImages: initialState,
     setDataImages: () => ({}),
 })
 
-const DataProvider = ({children}: any) => {
+const DataProvider = ({children}: { children?: JSX.Element | JSX.Element[] }) => {
     const [dataImages, setDataImages] = useState(initialState);
 
     const contextValues = useMemo(

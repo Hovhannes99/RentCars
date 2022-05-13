@@ -26,7 +26,6 @@ interface DataProps {
 }
 export const HomePage = ({
   data,
-  location
 }: PageProps<DataProps>) => {
   const { setDataImages } = UseDataContext()
 
@@ -125,7 +124,7 @@ export const query = graphql`
         
         ytInstagramCars: file(name: { glob: "insta_big" }) {
             childImageSharp {
-                resize(grayscale: false) {
+                resize(grayscale: false, width: 1000) {
                     src
                 }
             }
