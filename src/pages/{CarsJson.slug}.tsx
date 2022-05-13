@@ -1,12 +1,7 @@
 import cn from "classnames";
-import {graphql, Link, PageProps} from "gatsby";
-import {ComponentProps, Fragment, useEffect, useState} from "react";
-
-
-
-import {Instagram, Telegram, WhatsApp} from "../components/ContactWays";
+import {graphql } from "gatsby";
+import { Fragment } from "react";
 import AboutCar from "../components/AbboutCar";
-import { data } from "autoprefixer";
 
 const CarInfo = ({
                      info, className,

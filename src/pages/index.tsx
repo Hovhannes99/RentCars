@@ -1,17 +1,17 @@
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import { CarsJsonGroupConnection } from "../graphql";
-
 import { Button } from "../components";
 import Video from '../components/Video'
 import Cars from "../components/Cars";
 import { getVideoThumbnail } from "../lib/media";
 // @ts-ignore
 import CarVideo from "../assets/pugachev.mp4"
-// import style from '../styles/layout.module.scss';
 type ImageResizeType = { childImageSharp?: { resize?: { src?: string | null } | null } | null } | null;
 // @ts-ignore
 import *   as style from '../styles/layout.module.scss';
+import {UseDataContext} from "../context/dataContext";
+import {useEffect} from "react";
 
 interface DataProps {
   home: {
@@ -22,15 +22,17 @@ interface DataProps {
   ytRentCar: (name: { glob: "yt-rent-car" }) => ImageResizeType;
   ytCoupleRentCar: (name: { glob: "yt-couple-rent-car" }) => ImageResizeType;
   ytInstagramCars: (name: { glob: "yt-couple-rent-car" }) => ImageResizeType;
+  ytLogoRentCar : (name: { glob: "logo-with-text-silver" }) => ImageResizeType;
 }
-
 export const HomePage = ({
-  data: { home, cars, ytRentCar, ytCoupleRentCar, ytInstagramCars },
+  data,
   location
 }: PageProps<DataProps>) => {
+  const { setDataImages } = UseDataContext()
 
-  console.log(location, "location")
-
+  useEffect(()=>{
+    setDataImages(data)
+  }, [data])
   return (
 
     <div className={style.pageWrapper}>
@@ -55,7 +57,7 @@ export const HomePage = ({
           </div>
           <h2>Pick Your Next Ride</h2>
         </div>
-        <Cars cars={cars}/>
+        <Cars cars={data.cars}/>
         <section className={style.video}>
           <Video
             videoSrcURL={getVideoThumbnail("https://www.youtube.com/embed/0JEWBKZ5_UM")}
@@ -106,9 +108,16 @@ export const query = graphql`
                 }
             }
         }
-        ytCoupleRentCar: file(name: { glob: "yt-couple-rent-car" }) {
+         ytRentCar: file(name: { glob: "yt-rent-car" }) {
             childImageSharp {
                 resize(base64: true) {
+                    src
+                }
+            }
+        }
+        ytLogoRentCar: file(name: { glob: "logo-with-text-silver" }) {
+            childImageSharp {
+                resize(grayscale: false) {
                     src
                 }
             }
@@ -116,7 +125,7 @@ export const query = graphql`
         
         ytInstagramCars: file(name: { glob: "insta_big" }) {
             childImageSharp {
-                resize(base64: true) {
+                resize(grayscale: false) {
                     src
                 }
             }

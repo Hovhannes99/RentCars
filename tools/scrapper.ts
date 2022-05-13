@@ -105,10 +105,8 @@ const carParser = ($: ReturnType<typeof load>) => (carId: string) => {
 };
 
 async function run() {
-  console.log("fetching pugachev html");
   const pugachevPageHtml = await asHtml("pugachev.html");
 
-  console.log("loading pugachev html");
   const $ = load(pugachevPageHtml);
   const pugachevParser = carParser($);
   const cars = $("article.post-entry")

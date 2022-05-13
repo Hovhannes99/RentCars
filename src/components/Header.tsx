@@ -2,10 +2,10 @@ import cn from "classnames";
 import { Link } from "gatsby";
 // @ts-ignore
 import * as style from "../styles/car.module.scss"
-// @ts-ignore
-import Logo from "../static/logo-with-text-silver.png"
+import {UseDataContext} from "../context/dataContext";
 
 export const Header = ({ className }: { className?: string }) => {
+  const { dataImages } = UseDataContext()
   return (
     <header
         id={'avia-menu'}
@@ -16,7 +16,7 @@ export const Header = ({ className }: { className?: string }) => {
     >
       <div className={"container"}>
         <Link to={'/'}>
-          <img className={style.logo} src={Logo} alt={'logo'}/>
+          <img className={style.logo} src={dataImages?.ytLogoRentCar?.childImageSharp?.resize?.src} alt={'logo'}/>
         </Link>
       </div>
     </header>
