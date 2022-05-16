@@ -16,7 +16,7 @@ export const Header = ({ className }: { className?: string }) => {
     >
       <div className={"container"}>
         <Link to={'/'}>
-          <img className={style.logo} src={dataImages?.ytLogoRentCar?.childImageSharp?.resize?.src} alt={'logo'}/>
+          <img className={style.logo} src={dataImages?.ytLogoRentCar?.childImageSharp?.resize?.src || 'https://pugachev.corewebops.com/static/ae363d59887ade58bde7a777b3847508/2b960/logo-with-text-silver.webp'} alt={'logo'}/>
         </Link>
       </div>
     </header>
