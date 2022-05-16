@@ -4,7 +4,7 @@
 
 @layer components {
     .container {
-       @apply  max-w-[1440px] mx-auto
+        @apply max-w-[1440px] mx-auto
     }
 
     .main {
@@ -14,8 +14,8 @@
         @apply w-full bg-[#191919]
     }
 
-    @media (min-width: 1024px){
-        .layout--main{
+    @media (min-width: 1024px) {
+        .layout--main {
         }
     }
 
@@ -41,21 +41,21 @@
     }
 
 
-    @media (min-width: 768px){
-            .btn--wider {
-                font-size: 1.25rem;
-                line-height: 1.75rem;
-            }
+    @media (min-width: 768px) {
+        .btn--wider {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
     }
 
-    @media (min-width: 1024px){
+    @media (min-width: 1024px) {
         .btn {
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
         .btn {
             padding-left: 2.5rem;
             padding-right: 2.5rem;
@@ -72,12 +72,12 @@
         --tw-scale-y: 1;
         transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         transition-property: transform;
-        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-timing-function: cubic-bezier(.4, 0, .2, 1);
         transition-duration: .15s;
-        cursor:pointer;
+        cursor: pointer;
     }
 
-    .btn:hover{
+    .btn:hover {
         --tw-scale-x: 1.05;
         --tw-scale-y: 1.05;
     }
@@ -89,7 +89,6 @@
     }
 
 
-
     .btn-checkout-section {
         @apply w-full bg-blue-100 border border-blue-300 rounded-md shadow-sm py-2 px-4 text-sm font-medium hover:bg-blue-200;
     }
@@ -98,12 +97,19 @@
         @apply text-blue-600 hover:text-blue-500 cursor-pointer;
     }
 
-    *{
+    * {
         --tw-shadow: 0 0 transparent;
         --tw-ring-offset-width: 0px;
         --tw-ring-offset-color: #fff;
-        --tw-ring-color: rgba(59,130,246,0.5);
+        --tw-ring-color: rgba(59, 130, 246, 0.5);
         --tw-ring-offset-shadow: 0 0 transparent;
         --tw-ring-shadow: 0 0 transparent;
     }
+}
+
+.video-youtube {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 400px;
 }
