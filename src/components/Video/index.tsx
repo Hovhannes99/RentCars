@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import cn from "classnames";
 
 const Video = ({ videoSrcURL, className, videoTitle, ...props }: any) => (
@@ -6,14 +6,12 @@ const Video = ({ videoSrcURL, className, videoTitle, ...props }: any) => (
     <iframe
       width={"100%"}
       height={"450px"}
-
       src={videoSrcURL}
       title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       {...props}
-    >
-    </iframe>
+    ></iframe>
   </div>
-)
-export default Video
+);
+export default Video;

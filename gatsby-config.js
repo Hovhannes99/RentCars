@@ -13,6 +13,7 @@ module.exports = {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
     DEV_WEBPACK_CACHE: true,
     LMDB_STORE: true,
+    DEV_SSR: true,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -21,7 +22,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
-    "gatsby-remark-embed-video",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -31,7 +31,10 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
+        pedantic: true,
+        excerpt_separator: '<!-- end -->',
         plugins: [
+         "gatsby-remark-images",
           {
             resolve: "gatsby-remark-embed-video",
             options: {

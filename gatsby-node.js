@@ -1,5 +1,6 @@
 const { startCase, camelCase } = require("lodash");
 
+
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
 
@@ -8,6 +9,21 @@ exports.createSchemaCustomization = ({ actions }) => {
       make: String
   }`);
 };
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if(stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
 
 const titleCase = (str) => startCase(camelCase(str));
 const normalizeTitle = (title) => {
@@ -25,7 +41,6 @@ const normalizeTitle = (title) => {
 };
 
 exports.onCreatePage = ({ page, actions, getNodesByType }) => {
-
   if(page.componentPath.endsWith("{CarsJson.slug}.tsx")) {
     const { slug } = page.context;
     const { createPage, deletePage } = actions;
@@ -36,31 +51,32 @@ exports.onCreatePage = ({ page, actions, getNodesByType }) => {
     deletePage(page);
     createPage({
       ...page,
+      page:"404",
       context: {
         ...page.context,
         make: carMake,
       },
     });
-  } else {
-    const { createPage, deletePage } = actions;
-    deletePage(page);
-
-
-    createPage({
-      ...page,
-      context: {
-        ...page.context,
-        make: "Not Found",
-      },
-    });
   }
+  // else {
+  //   const { createPage, deletePage } = actions;
+  //   deletePage(page);
+  //   createPage({
+  //     ...page,
+  //     page:"404",
+  //     context: {
+  //       ...page.context,
+  //       make: "Not Found",
+  //     },
+  //   });
+  // }
 };
 
 exports.onCreateBabelConfig = ({ actions }) => {
   actions.setBabelPlugin({
-    name: '@babel/plugin-transform-react-jsx',
+    name: "@babel/plugin-transform-react-jsx",
     options: {
-      runtime: 'automatic',
+      runtime: "automatic",
     },
   });
 };

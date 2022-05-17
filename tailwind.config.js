@@ -5,7 +5,7 @@ const { screens } = require("./src/theme/responsive");
 
 module.exports = {
   mode: "jit",
-  purge:["./src/**/*.{js,jsx,ts,tsx}"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     container: {
       center: true,
@@ -16,8 +16,7 @@ module.exports = {
       },
     },
     screens,
-    extend: {
-    },
+    extend: {},
   },
   variants: {
     extend: {},

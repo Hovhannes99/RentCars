@@ -1,65 +1,67 @@
 import cn from "classnames";
-import {graphql} from "gatsby";
-import {Fragment, useEffect} from "react";
+import { graphql } from "gatsby";
+import { Fragment, useEffect } from "react";
 import AboutCar from "../components/AbboutCar";
-import {UseDataContext} from "../context/dataContext";
+import { UseDataContext } from "../context/dataContext";
 
 const CarInfo = ({
-                     info, className,
-                 }: {
-    info: any;
-    className?: string;
+  info,
+  className,
+}: {
+  info: any;
+  className?: string;
 }): JSX.Element => {
-    return (<>
-            <div
-                className={cn(
-                    className,
-                    "grid grid-cols-2",
-                    "gap-y-2 ",
-                    "text-base md:text-xl"
-                )}
-            >
-                {Object.entries(info).map(([k, v]) => {
-                    let key = k;
-                    if (key === "security") {
-                        key = "Security Deposit";
-                    } else if (key === "mph") {
-                        key = "0-60mph in";
-                    } else if (key === "hp") {
-                        key = "Horse Power";
-                    }
-                    return (
-                        <Fragment key={key}>
-                            <div>{key}:</div>
-                            <div className="text-white">{v as string}</div>
-                        </Fragment>
-                    );
-                })}
-            </div>
-        </>
-    );
-}
+  return (
+    <>
+      <div
+        className={cn(
+          className,
+          "grid grid-cols-2",
+          "gap-y-2 ",
+          "text-base md:text-xl"
+        )}
+      >
+        {Object.entries(info).map(([k, v]) => {
+          let key = k;
+          if (key === "security") {
+            key = "Security Deposit";
+          } else if (key === "mph") {
+            key = "0-60mph in";
+          } else if (key === "hp") {
+            key = "Horse Power";
+          }
+          return (
+            <Fragment key={key}>
+              <div>{key}:</div>
+              <div className="text-white">{v as string}</div>
+            </Fragment>
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
 export const CarPage = (props) => {
-    const {car} = props.data;
-    const { setDataImages } = UseDataContext()
-    useEffect(()=>{
-        setDataImages(props.data)
-    },[props.data])
-    return <AboutCar car={car} data={props.data} />
+  const { car } = props.data;
+  const { setDataImages } = UseDataContext();
+  useEffect(() => {
+    setDataImages(props.data);
+  }, [props.data]);
+  return <AboutCar car={car} data={props.data} />;
 };
 
 export default CarPage;
 
 export const query = graphql`
   query CarQuery($make: String!, $slug: String!) {
-       ytInstagramCars: file(name: { glob: "insta_big" }) {
-            childImageSharp {
-                resize(grayscale: false, width: 1000) {
-                    src
-                }
-            }
+    ytInstagramCars: file(name: { glob: "insta_big" }) {
+      childImageSharp {
+        resize(grayscale: false, width: 1000) {
+          src
         }
+      }
+    }
     car: carsJson(slug: { eq: $slug }) {
       title
       slug
@@ -123,20 +125,20 @@ export const query = graphql`
         }
       }
     }
-      ytRentCar: file(name: { glob: "yt-rent-car" }) {
-          childImageSharp {
-              resize(base64: true) {
-                  src
-              }
-          }
+    ytRentCar: file(name: { glob: "yt-rent-car" }) {
+      childImageSharp {
+        resize(base64: true) {
+          src
+        }
       }
-      ytCoupleRentCar: file(name: { glob: "yt-couple-rent-car" }) {
-          childImageSharp {
-              resize(base64: true) {
-                  src
-              }
-          }
+    }
+    ytCoupleRentCar: file(name: { glob: "yt-couple-rent-car" }) {
+      childImageSharp {
+        resize(base64: true) {
+          src
+        }
       }
+    }
     sameMakeCars: allCarsJson(
       filter: { make: { eq: $make }, slug: { ne: $slug } }
     ) {

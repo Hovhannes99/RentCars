@@ -7,6 +7,10 @@
   Gatsby minimal starter
 </h1>
 
+        "gatsby-remark-embed-video": "^3.1.1",
+        "gatsby-remark-responsive-iframe": "^5.14.0",
+        "gatsby-transformer-remark": "^5.14.0",
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

@@ -4,14 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6e1b6f3-7561-47eb-a76f-0574c9b61a94" name="Changes" comment="remove youtube video">
+    <list default="true" id="f6e1b6f3-7561-47eb-a76f-0574c9b61a94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-ssr.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-ssr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/carExotic.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/carExotic.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/exoticCar.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/exoticCar.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/pugachev.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/pugachev.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AbboutCar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AbboutCar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cars/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cars/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Video/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Video/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/cars.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cars.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphql/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/{CarsJson.slug}.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/{CarsJson.slug}.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/lambo-vert-hero.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/lambo-vert-hero.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/car.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/car.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/responsive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/responsive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.container-plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.container-plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/scrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tools/scrapper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +74,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/tigran/Desktop/RentCars",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/home/tigran/Desktop/RentCars/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tigran/Desktop/RentCars&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/tigran/Desktop/RentCars/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets" />
@@ -107,6 +134,8 @@
       <workItem from="1652363808854" duration="129000" />
       <workItem from="1652363948324" duration="375000" />
       <workItem from="1652364347853" duration="41000" />
+      <workItem from="1652707946621" duration="13881000" />
+      <workItem from="1652723923489" duration="2126000" />
     </task>
     <task id="LOCAL-00001" summary="merge conflict">
       <created>1652458708772</created>
@@ -150,18 +179,6 @@
     <MESSAGE value="merge conflict" />
     <MESSAGE value="remove youtube video" />
     <option name="LAST_COMMIT_MESSAGE" value="remove youtube video" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/.cache/socketIo.js</url>
-          <line>24</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 // @ts-ignore
-import * as style from "../styles/car.module.scss"
+import * as style from "../styles/car.scss"
 import {UseDataContext} from "../context/dataContext";
 
 const AboutCar = ({car, data}) => {

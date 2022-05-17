@@ -1,3 +1,4 @@
+import * as React from "react"
 import { load } from "cheerio";
 import { link, readFile, writeFileSync } from "fs";
 import { promisify } from "util";

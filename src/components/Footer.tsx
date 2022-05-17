@@ -1,5 +1,6 @@
 import cn from "classnames";
 import {UseDataContext} from "../context/dataContext";
+import {  StaticImage } from "gatsby-plugin-image";
 
 export default ({ className }: { className?: string }) => {
     const { dataImages } = UseDataContext()
